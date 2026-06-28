@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HOLMA - Operating Model & Product Architecture</title>
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="HOLMA Operating Model: Manual UX, Communication Hub, AI-Skills und Automation.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="HOLMA - Operating Model & Product Architecture">
+  <meta property="og:description" content="Wie HOLMA aus Kommunikation, Wissen und Hotelregeln ausführbare Arbeit macht.">
+  <meta property="og:url" content="https://hannestrummer.github.io/holma-emotional-preview/developer/">
+  <meta property="og:image" content="https://hannestrummer.github.io/holma-emotional-preview/assets/holma-og-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/holma-favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="developer.css">
+</head>
+<body class="auth-locked">
+  <div class="password-screen" id="password-screen" role="dialog" aria-labelledby="password-title" aria-modal="true">
+    <div class="password-card">
+      <div class="password-brand">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <strong>HOLMA</strong>
+      </div>
+      <h1 id="password-title">Private Preview</h1>
+      <p>Operating Model & Product Architecture. Diese Seite ist geschützt und nicht öffentlich bestimmt.</p>
+      <form id="password-form">
+        <label for="password-input">Passwort</label>
+        <input id="password-input" name="password" type="password" autocomplete="current-password" autofocus>
+        <button type="submit">Preview öffnen</button>
+        <p class="password-error" id="password-error" hidden>Passwort stimmt nicht.</p>
+      </form>
+    </div>
+  </div>
+  <header class="site-header" aria-label="HOLMA Developer Navigation">
+    <a class="brand" href="../index.html" aria-label="HOLMA Vision">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span>HOLMA</span>
+    </a>
+    <nav>
+      <a href="../index.html">Vision</a>
+      <a href="#model">Model</a>
+      <a href="#surfaces">Surfaces</a>
+      <a href="#skills">Skills</a>
+      <a href="#validation">Validation</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="developer-hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="section-kicker">Developer Seite</p>
+        <h1>Operating Model &amp; Product Architecture</h1>
+        <p class="subtitle">Manual UX. Communication Hub. AI-Skills. Automation.</p>
+        <p>Wie HOLMA aus Kommunikation, Wissen und Hotelregeln ausführbare Arbeit macht.</p>
+        <strong>Manual UX, Chat und Automatisierung sind keine drei Produkte. Sie sind drei Zugänge zu denselben Hotelabläufen.</strong>
+      </div>
+      <div class="hero-product product-shell" aria-label="HOLMA Operating Model Preview">
+        <aside class="app-nav">
+          <strong>HOLMA</strong>
+          <span class="active">Today</span>
+          <span>Stays</span>
+          <span>Guests</span>
+          <span>Hub</span>
+          <span>Team</span>
+          <span>Knowledge</span>
+          <span>Reviews</span>
+          <span>Marketing</span>
+          <span>Skills</span>
+          <span>Settings</span>
+        </aside>
+        <div class="app-main">
+          <div class="topbar">Search guests, stays, tasks, rules...</div>
+          <div class="hero-dashboard">
+            <article>
+              <span>Today</span>
+              <b>3</b>
+              <p>Punkte brauchen Entscheidung</p>
+            </article>
+            <article>
+              <span>Hub</span>
+              <b>12</b>
+              <p>Nachrichten mit Kontext</p>
+            </article>
+            <article>
+              <span>Skills</span>
+              <b>8</b>
+              <p>aktive Arbeitsabläufe</p>
+            </article>
+          </div>
+          <div class="work-row">
+            <strong>Anna Berger kommt 22:30</strong>
+            <span>Late Arrival · Parkplatz · Abenddienst</span>
+            <em>Flow vorgeschlagen</em>
+          </div>
+        </div>
+        <aside class="assist-panel">
+          <strong>HOLMA Assist</strong>
+          <p>Late Arrival Flow kann vorbereitet werden. Parkplatzregel ist bekannt, aber Abenddienst-Freigabe fehlt.</p>
+          <button>Flow ansehen</button>
+        </aside>
+      </div>
+    </section>
+
+    <section class="bridge-section">
+      <div>
+        <p class="section-kicker">Von Deck 1 zu Deck 2</p>
+        <h2>Von der Vision zur operativen Produktlogik</h2>
+      </div>
+      <div class="copy-stack">
+        <p>Deck 1 beschreibt, warum HOLMA relevant ist: kleine Hotels brauchen die Organisationskraft großer Häuser.</p>
+        <p>Diese Seite beschreibt, wie HOLMA funktionieren muss, damit dieses Versprechen real wird.</p>
+        <p>HOLMA soll nicht nur Nachrichten beantworten. HOLMA soll Hotelarbeit organisieren und ausführen.</p>
+        <strong>HOLMA wird dann stark, wenn Kommunikation, Oberfläche und Automatisierung auf dieselben Hotelabläufe zugreifen.</strong>
+      </div>
+    </section>
+
+    <section id="model" class="thesis-section">
+      <div class="section-heading">
+        <p class="section-kicker">UX These</p>
+        <h2>Die Lernkurve wandert</h2>
+        <p>Früher musste der Mensch Software lernen. Heute muss Software lernen, wie ein Betrieb funktioniert.</p>
+      </div>
+      <div class="thesis-grid">
+        <article>
+          <span>Produkt-Implikation</span>
+          <strong>Das Hotelteam soll nicht HOLMA lernen. HOLMA muss das Hotel verstehen.</strong>
+          <p>Kleine Hotels haben keine Zeit für neue Menüs, komplizierte Einstellungen, Schulungen und weitere Dashboards.</p>
+        </article>
+        <article class="tag-panel">
+          <span>HOLMA muss aufnehmen</span>
+          <div>
+            <b>Zimmer</b><b>Regeln</b><b>Team</b><b>Sprache</b><b>Abläufe</b><b>Gästefragen</b><b>Ausnahmen</b><b>Bewertungen</b><b>wiederkehrende Situationen</b>
+          </div>
+        </article>
+      </div>
+      <p class="core-line">Die beste UX ist nicht die, die erklärt werden muss. Die beste UX ist die, die sich wie der Betrieb selbst anfühlt.</p>
+    </section>
+
+    <section class="reference-section">
+      <div class="reference-copy">
+        <p class="section-kicker">UX Referenz</p>
+        <h2>SALMA zeigt das Prinzip bereits</h2>
+        <p>SALMA ist nicht nur ein Chat. SALMA kombiniert klare manuelle Oberfläche, operative Übersicht, Navigation, Communication Hub, Rollen, Menschen und mitlaufende Assistenz im Kontext.</p>
+        <strong>Nicht Chat statt Oberfläche. Sondern manuelle Bedienung, Communication Hub und KI-Unterstützung in einem System.</strong>
+      </div>
+      <div class="principle-stack">
+        <article><span>Manual UX</span><p>gibt Überblick, Status und Kontrolle.</p></article>
+        <article><span>Communication Hub</span><p>bringt Gäste, Team und Koordination zusammen.</p></article>
+        <article><span>HOLMA Assistant</span><p>macht aus Kontext Vorschläge, Aufgaben und Flows.</p></article>
+      </div>
+    </section>
+
+    <section class="workflow-section">
+      <div class="section-heading">
+        <p class="section-kicker">Ein Ablauf. Mehrere Zugänge.</p>
+        <h2>Alle Wege führen zum gleichen Workflow</h2>
+        <p>HOLMA darf keine separate Logik für manuelle Oberfläche, Chat und Automation haben. Derselbe Ablauf muss über unterschiedliche Zugänge ausgelöst werden können.</p>
+      </div>
+      <div class="workflow-diagram" aria-label="Late Arrival Flow">
+        <div class="trigger">Manual UI<span>Late Arrival vorbereiten</span></div>
+        <div class="trigger">HOLMA Chat<span>Bereite Zimmer 7 vor</span></div>
+        <div class="flow-core">
+          <strong>Late Arrival Flow</strong>
+          <span>Regel prüfen</span>
+          <span>Buchung prüfen</span>
+          <span>Nachricht vorbereiten</span>
+          <span>Team informieren</span>
+          <span>Log schreiben</span>
+        </div>
+        <div class="trigger">Guest Message<span>Wir kommen 22:30</span></div>
+        <div class="trigger">Rule Trigger<span>Anreise nach 21:00</span></div>
+      </div>
+      <p class="core-line">Was manuell sauber ausführbar ist, kann später über Chat, Gastnachricht, Regel oder Systemsignal automatisch ausgelöst werden.</p>
+    </section>
+
+    <section class="manual-section">
+      <div class="manual-copy">
+        <p class="section-kicker">Manual First. Autonomous Later.</p>
+        <h2>Die manuelle UX ist kein Übergangszustand.</h2>
+        <p>Sie ist Control Mode, Trust Mode und Training Mode. Alles, was HOLMA später autonom tun soll, muss zuerst manuell sauber funktionieren.</p>
+      </div>
+      <div class="manual-grid">
+        <article><strong>Control Mode</strong><p>Überblick, Status, Korrektur und manuelle Ausführung.</p></article>
+        <article><strong>Trust Mode</strong><p>Regeln, Grenzen, Freigaben, Logs und Fallbacks werden sichtbar.</p></article>
+        <article><strong>Training Mode</strong><p>Nutzung erzeugt Signale für verlässlichere Automation.</p></article>
+      </div>
+      <p class="core-line">Automation grows from working manual flows.</p>
+    </section>
+
+    <section class="hub-section">
+      <div class="section-heading">
+        <p class="section-kicker">Communication Hub</p>
+        <h2>Der Hub ist das Nervensystem</h2>
+        <p>Im Hub wird Kommunikation operational: Gästefragen, Staff Messages, Gruppen, Manager Chat, Housekeeping, HOLMA Assistant, Freigaben, Quick Actions, Task Suggestions, Review Drafts und Übergaben laufen zusammen.</p>
+      </div>
+      <div class="hub-mockup">
+        <aside>
+          <strong>Hub</strong>
+          <span class="active">Anna Berger</span>
+          <span>Front Desk</span>
+          <span>Housekeeping</span>
+          <span>Review Queue</span>
+        </aside>
+        <main>
+          <p class="bubble guest">Wir kommen gegen 22:30. Gibt es bei Ihnen einen Parkplatz?</p>
+          <p class="bubble holma">Erkannt: Late Arrival, Parking Request, Arrival Briefing.</p>
+          <div class="action-row">
+            <button>Late Arrival</button>
+            <button>Parkplatz bestätigen</button>
+            <button>Team übergeben</button>
+          </div>
+        </main>
+        <div class="hub-side">
+          <strong>Kontext</strong>
+          <p>Gast · Aufenthalt · Zimmer · Regel · Aufgabe</p>
+        </div>
+      </div>
+      <p class="core-line">Der Hub ist die kommunikative Schaltzentrale. Strukturierte Hotelarbeit braucht zusätzlich strukturierte Oberflächen.</p>
+    </section>
+
+    <section id="surfaces" class="surfaces-section">
+      <div class="section-heading">
+        <p class="section-kicker">Product Surfaces</p>
+        <h2>Die wichtigsten HOLMA-Oberflächen</h2>
+        <p>Diese Bereiche sind keine separaten Produkte. Sie sind Oberflächen rund um dasselbe Hotelmodell und dieselbe Workflow Engine.</p>
+      </div>
+      <div class="surface-grid">
+        <article><strong>HOLMA Today</strong><span>Control Center</span></article>
+        <article><strong>Communication Hub</strong><span>Gäste, Team, Gruppen</span></article>
+        <article><strong>Stays</strong><span>Reservations / Operations Board</span></article>
+        <article><strong>Guest Detail</strong><span>Stay Context</span></article>
+        <article><strong>Staff Knowledge</strong><span>Training im Arbeitsfluss</span></article>
+        <article><strong>Reviews & Visibility</strong><span>Marketing aus Alltag</span></article>
+        <article><strong>Skill Center</strong><span>Automation Rules</span></article>
+        <article><strong>Hotel Learning</strong><span>Setup Assistant</span></article>
+      </div>
+      <p class="core-line">HOLMA ist eine Arbeitsoberfläche für Hotelarbeit, nicht eine Sammlung einzelner Tools.</p>
+    </section>
+
+    <section class="wireframe-section">
+      <div class="section-heading">
+        <p class="section-kicker">Konzeptionelle Wireframes</p>
+        <h2>Die Produktflächen als Arbeitslogik</h2>
+        <p>Die folgenden Screens übersetzen das Briefing in größere, lesbare Produktdarstellungen: linke Navigation, Arbeitsfläche, Hub, Assistenz und Workflow Engine.</p>
+      </div>
+
+      <article class="large-wire">
+        <div class="wire-copy">
+          <span>Wireframe 1</span>
+          <h3>Global HOLMA Layout</h3>
+          <p>Manual UX gibt Struktur. HOLMA Assistant gibt Kontext. Workflow Engine gibt Ausführung.</p>
+        </div>
+        <div class="product-shell">
+          <aside class="app-nav">
+            <strong>HOLMA</strong><span class="active">Today</span><span>Stays</span><span>Guests</span><span>Hub</span><span>Team</span><span>Reviews</span><span>Skills</span>
+          </aside>
+          <div class="app-main">
+            <div class="topbar">Search guests, stays, tasks, rules...</div>
+            <div class="tile-grid">
+              <div>Today<span>operative Übersicht</span></div>
+              <div>Stays<span>Reservierungen</span></div>
+              <div>Hub<span>Kommunikation</span></div>
+              <div>Knowledge<span>Hauswissen</span></div>
+              <div>Reviews<span>Sichtbarkeit</span></div>
+              <div>Skills<span>Automation</span></div>
+            </div>
+          </div>
+          <aside class="assist-panel"><strong>HOLMA Assist</strong><p>Summary, suggested actions, pending approvals, open questions.</p></aside>
+        </div>
+      </article>
+
+      <div class="wire-grid">
+        <article class="wire-card">
+          <span>Wireframe 2</span>
+          <h3>HOLMA Today</h3>
+          <div class="metric-grid"><div><b>7</b><small>Anreisen</small></div><div><b>4</b><small>Abreisen</small></div><div><b>3</b><small>Late Arrivals</small></div><div><b>5</b><small>Tasks</small></div></div>
+          <p>HOLMA zeigt nicht nur Daten. HOLMA zeigt, was als Nächstes zu tun ist.</p>
+        </article>
+        <article class="wire-card">
+          <span>Wireframe 3</span>
+          <h3>Communication Hub</h3>
+          <p class="mini-message">„Wir kommen erst um 22:30.“</p>
+          <p>Erkennung: Late Arrival · Parking · Team Handover.</p>
+        </article>
+        <article class="wire-card">
+          <span>Wireframe 4</span>
+          <h3>Stays Board</h3>
+          <div class="table-lines"><p>Anna Berger · Room 12 · Prepare</p><p>John Mayer · Room 04 · Standard</p><p>Eva Grün · Room 08 · Maintenance</p></div>
+        </article>
+        <article class="wire-card">
+          <span>Wireframe 5</span>
+          <h3>Guest Detail</h3>
+          <p>Gast, Aufenthalt, Kommunikation, Aufgaben und HOLMA-Vorschläge in einem Kontext.</p>
+        </article>
+        <article class="wire-card">
+          <span>Wireframe 6</span>
+          <h3>Staff Knowledge</h3>
+          <p>Team fragt im Arbeitsmoment. HOLMA macht Hauswissen ausführbar.</p>
+        </article>
+        <article class="wire-card">
+          <span>Wireframe 7</span>
+          <h3>Reviews & Visibility</h3>
+          <p>Review-Antwort, Google-Post, Task oder Visibility Draft aus echtem Hotelalltag.</p>
+        </article>
+        <article class="wire-card">
+          <span>Wireframe 8</span>
+          <h3>Setup als Gespräch</h3>
+          <p>Website sagt 14:00. Buchungstext sagt 15:00. E-Mail sagt 16:00. HOLMA fragt nach der gültigen Regel.</p>
+        </article>
+        <article class="wire-card">
+          <span>Wireframe 9</span>
+          <h3>Skill Center</h3>
+          <p>Late Arrival Skill: Draft → Manual → Suggested → Approved → Policy → Operator.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+      <div class="section-heading">
+        <p class="section-kicker">AI-Skills</p>
+        <h2>Prompts schreiben Texte. Skills führen Hotelarbeit aus.</h2>
+        <p>Ein HOLMA Skill ist ein ausführbarer Workflow mit Trigger, Context, Rules, Permissions, Actions, Approval Level, Logs, Metrics, Learning Signals und Fallback.</p>
+      </div>
+      <div class="skill-system">
+        <article><strong>Trigger</strong><p>UI, Chat, Gastnachricht, Zeit, Regel, Systemsignal.</p></article>
+        <article><strong>Context</strong><p>Gast, Aufenthalt, Zimmer, Sprache, Regel, Historie.</p></article>
+        <article><strong>Rules</strong><p>Hotelstandard, Grenzen, Freigaben, Ausnahmefälle.</p></article>
+        <article><strong>Actions</strong><p>Antwort, Aufgabe, Übergabe, Review Draft, Log.</p></article>
+        <article><strong>Logs</strong><p>Was wurde vorgeschlagen, geändert, bestätigt, automatisiert?</p></article>
+        <article><strong>Learning</strong><p>Skill-Versionen werden geprüft und verbessert.</p></article>
+      </div>
+    </section>
+
+    <section class="maturity-section">
+      <div class="maturity-copy">
+        <p class="section-kicker">Automation Maturity</p>
+        <h2>Autonomie entsteht über Reifegrade</h2>
+        <p>HOLMA lernt nicht unkontrolliert. HOLMA lernt über versionierte, freigegebene Skills.</p>
+      </div>
+      <div class="maturity-rail">
+        <span>Draft</span>
+        <span>Manual</span>
+        <span>Suggested</span>
+        <span>Approved</span>
+        <span>Policy</span>
+        <span>Operator</span>
+      </div>
+      <p class="core-line">Menschen definieren Standards. HOLMA führt Standardfälle aus.</p>
+    </section>
+
+    <section class="hotel-model-section">
+      <div class="section-heading">
+        <p class="section-kicker">Hotelmodell</p>
+        <h2>HOLMA kann nur operativ handeln, wenn es das Hotel strukturiert versteht.</h2>
+      </div>
+      <div class="model-map">
+        <article><strong>Quellen</strong><p>Website, Zimmertexte, Buchungstexte, Reviews, Vorlagen, alte Nachrichten, Hausregeln, Exporte.</p></article>
+        <article><strong>Struktur</strong><p>Rooms, Services, Policies, Guest Journey States, Rollen, Exceptions, Approvals.</p></article>
+        <article><strong>Ausführung</strong><p>Standardantworten, lokale Tipps, Visibility Themes, Revenue Opportunities, Skill Rules.</p></article>
+      </div>
+    </section>
+
+    <section class="systems-section">
+      <div class="systems-copy">
+        <p class="section-kicker">Bestehende Systeme bleiben Realität</p>
+        <h2>HOLMA wird der Ort, an dem Hotelarbeit passiert.</h2>
+        <p>PMS, Booking Engine, Channel Manager, Plattformen, Website, Google, Reviews, E-Mail, Telefon, WhatsApp, Vorlagen, Spreadsheets und Notizen bleiben Quellen, Systeme of Record, Exporte und Integrationspunkte.</p>
+      </div>
+      <div class="system-flow">
+        <div>PMS</div><div>Booking</div><div>Reviews</div><div>E-Mail</div><div>WhatsApp</div><strong>HOLMA Work Surface</strong>
+      </div>
+    </section>
+
+    <section id="validation" class="validation-section">
+      <div class="section-heading">
+        <p class="section-kicker">Validation</p>
+        <h2>Was ein erster technischer Test zeigen muss</h2>
+        <p>Der Test misst nicht Textqualität. Der Test misst operative Übernahmefähigkeit.</p>
+      </div>
+      <div class="validation-grid">
+        <span>Kann HOLMA ein Hotel aus bestehenden Quellen lernen?</span>
+        <span>Kann das Team die manuelle UX ohne Training nutzen?</span>
+        <span>Macht der Communication Hub Arbeit klarer?</span>
+        <span>Kann ein manueller Flow zuverlässig ausgeführt werden?</span>
+        <span>Kann derselbe Flow per Chat ausgelöst werden?</span>
+        <span>Sind Approvals und Logs verständlich?</span>
+        <span>Kann HOLMA nützliche Übergaben erstellen?</span>
+        <span>Welche Flows sind sicher genug für Automation?</span>
+      </div>
+    </section>
+
+    <section class="challenge-section">
+      <div class="challenge-bg" aria-hidden="true"></div>
+      <div class="challenge-content">
+        <p class="section-kicker">Developer Challenge</p>
+        <h2>Nicht: Können wir einen Chatbot bauen?</h2>
+        <p>Die eigentliche Frage ist: Können wir HOLMA so bauen, dass Oberfläche, Hub, Chat, Skills, Regeln, Freigaben und Lernen auf dieselben Hotelabläufe zugreifen?</p>
+        <strong>HOLMA macht Hotelwissen ausführbar.</strong>
+      </div>
+    </section>
+  </main>
+  <script>
+    (() => {
+      const passwordHash = "ea38ef8882a81ae9a81f5c665519e6bc3f94295b8bbb68de37dc9c5c5cd667f1";
+      const screen = document.getElementById("password-screen");
+      const form = document.getElementById("password-form");
+      const input = document.getElementById("password-input");
+      const error = document.getElementById("password-error");
+      const storageKey = "holma-preview-unlocked";
+
+      const unlock = () => {
+        document.body.classList.remove("auth-locked");
+        screen.hidden = true;
+      };
+
+      const digest = async (value) => {
+        const data = new TextEncoder().encode(value);
+        const hash = await crypto.subtle.digest("SHA-256", data);
+        return [...new Uint8Array(hash)].map((byte) => byte.toString(16).padStart(2, "0")).join("");
+      };
+
+      if (sessionStorage.getItem(storageKey) === "true") {
+        unlock();
+      }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        error.hidden = true;
+        const candidate = await digest(input.value);
+        if (candidate === passwordHash) {
+          sessionStorage.setItem(storageKey, "true");
+          unlock();
+          return;
+        }
+        error.hidden = false;
+        input.select();
+      });
+    })();
+  </script>
+</body>
+</html>
