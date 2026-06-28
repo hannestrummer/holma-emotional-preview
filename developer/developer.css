@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -33,6 +34,7 @@ body {
   font-size: 18px;
   line-height: 1.58;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 .auth-locked {
@@ -211,7 +213,10 @@ button {
 nav {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   gap: clamp(16px, 2.4vw, 34px);
+  min-width: 0;
 }
 
 nav a {
@@ -239,7 +244,7 @@ p {
 h1 {
   margin-bottom: 18px;
   color: #fffdfa;
-  font-size: clamp(52px, 6vw, 90px);
+  font-size: clamp(52px, 5.6vw, 86px);
   line-height: 0.96;
   font-weight: 840;
   letter-spacing: 0;
@@ -252,6 +257,8 @@ h2 {
   line-height: 1.02;
   font-weight: 805;
   letter-spacing: 0;
+  hyphens: auto;
+  overflow-wrap: anywhere;
 }
 
 h3 {
@@ -311,19 +318,23 @@ p {
 }
 
 .developer-hero {
-  --max: 1240px;
+  position: relative;
+  width: 100%;
+  max-width: none;
   min-height: calc(100svh - 72px);
   display: grid;
-  grid-template-columns: minmax(360px, 0.92fr) minmax(600px, 1.08fr);
+  grid-template-columns: minmax(420px, 0.88fr) minmax(620px, 1.12fr);
   align-items: center;
   gap: clamp(32px, 5vw, 64px);
+  margin: 0;
+  padding: clamp(76px, 8vw, 118px) clamp(56px, 6.5vw, 116px);
   color: #fffdfa;
+  overflow: hidden;
 }
 
 .hero-bg {
   position: absolute;
-  inset: 72px 0 auto;
-  min-height: calc(100svh - 72px);
+  inset: 0;
   background:
     linear-gradient(90deg, rgba(13, 29, 24, 0.86) 0%, rgba(13, 29, 24, 0.64) 42%, rgba(13, 29, 24, 0.18) 100%),
     url("../assets/holma-hero-lobby.png") center / cover;
@@ -333,6 +344,16 @@ p {
 .hero-product {
   position: relative;
   z-index: 1;
+}
+
+.hero-copy {
+  max-width: 760px;
+}
+
+.hero-product {
+  width: 100%;
+  max-width: 900px;
+  justify-self: end;
 }
 
 .hero-copy p:not(.section-kicker),
@@ -375,8 +396,9 @@ p {
 
 .product-shell {
   display: grid;
-  grid-template-columns: 150px minmax(0, 1fr) 196px;
+  grid-template-columns: minmax(126px, 150px) minmax(0, 1fr) minmax(168px, 196px);
   min-height: 500px;
+  min-width: 0;
   overflow: hidden;
   border: 1px solid rgba(221, 213, 199, 0.9);
   border-radius: 14px;
@@ -465,7 +487,7 @@ p {
 .hero-dashboard b {
   display: block;
   color: var(--forest);
-  font-size: 42px;
+  font-size: clamp(30px, 3vw, 42px);
   line-height: 1;
 }
 
@@ -519,10 +541,19 @@ p {
 .maturity-section,
 .learning-loop-section {
   display: grid;
-  grid-template-columns: minmax(300px, 0.86fr) minmax(0, 1.14fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: clamp(36px, 6vw, 80px);
   align-items: center;
   border-top: 1px solid rgba(222, 214, 200, 0.72);
+}
+
+.bridge-section > *,
+.reference-section > *,
+.manual-section > *,
+.systems-section > *,
+.maturity-section > *,
+.learning-loop-section > * {
+  min-width: 0;
 }
 
 .copy-stack {
@@ -1038,10 +1069,12 @@ p {
 }
 
 .challenge-section {
+  position: relative;
   min-height: 100svh;
   display: grid;
   align-items: center;
   padding: clamp(86px, 9vw, 132px) clamp(24px, 6vw, 88px);
+  overflow: hidden;
 }
 
 .challenge-bg {
@@ -1077,6 +1110,19 @@ p {
   line-height: 1.06;
 }
 
+@media (max-width: 1500px) {
+  .hero-product.product-shell {
+    grid-template-columns: minmax(126px, 150px) minmax(0, 1fr);
+  }
+
+  .hero-product .assist-panel {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 0 24px 24px;
+  }
+}
+
 @media (max-width: 1160px) {
   .developer-hero,
   .bridge-section,
@@ -1089,9 +1135,19 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .developer-hero {
+    padding-right: clamp(28px, 5vw, 60px);
+    padding-left: clamp(28px, 5vw, 60px);
+  }
+
+  .hero-product {
+    justify-self: stretch;
+    max-width: 100%;
+  }
+
   .product-shell,
   .large-wire .product-shell {
-    grid-template-columns: 150px minmax(0, 1fr);
+    grid-template-columns: minmax(126px, 150px) minmax(0, 1fr);
   }
 
   .assist-panel {
@@ -1127,17 +1183,15 @@ p {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1040px) {
   nav {
     display: none;
   }
+}
 
-  .hero-bg {
-    min-height: 760px;
-  }
-
+@media (max-width: 860px) {
   .developer-hero {
-    min-height: 760px;
+    min-height: auto;
   }
 
   .product-shell,
@@ -1214,8 +1268,13 @@ p {
     padding: 62px 0;
   }
 
+  .developer-hero {
+    width: 100%;
+    padding: 62px 24px;
+  }
+
   h1 {
-    font-size: clamp(44px, 13vw, 64px);
+    font-size: clamp(42px, 11.5vw, 54px);
   }
 
   h2 {
