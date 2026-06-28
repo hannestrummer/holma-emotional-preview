@@ -297,8 +297,13 @@ p {
 .wireframe-section,
 .skills-section,
 .maturity-section,
+.governance-section,
+.learning-loop-section,
 .hotel-model-section,
+.setup-section,
 .systems-section,
+.boundaries-section,
+.foundations-section,
 .validation-section {
   width: min(var(--max), calc(100vw - 56px));
   margin: 0 auto;
@@ -306,12 +311,12 @@ p {
 }
 
 .developer-hero {
-  --max: 1320px;
+  --max: 1240px;
   min-height: calc(100svh - 72px);
   display: grid;
-  grid-template-columns: minmax(380px, 0.86fr) minmax(680px, 1.14fr);
+  grid-template-columns: minmax(360px, 0.92fr) minmax(600px, 1.08fr);
   align-items: center;
-  gap: clamp(36px, 6vw, 82px);
+  gap: clamp(32px, 5vw, 64px);
   color: #fffdfa;
 }
 
@@ -370,7 +375,7 @@ p {
 
 .product-shell {
   display: grid;
-  grid-template-columns: 160px minmax(0, 1fr) 210px;
+  grid-template-columns: 150px minmax(0, 1fr) 196px;
   min-height: 500px;
   overflow: hidden;
   border: 1px solid rgba(221, 213, 199, 0.9);
@@ -427,7 +432,7 @@ p {
 .hero-dashboard {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  gap: 10px;
   margin: 22px 0;
 }
 
@@ -511,7 +516,8 @@ p {
 .reference-section,
 .manual-section,
 .systems-section,
-.maturity-section {
+.maturity-section,
+.learning-loop-section {
   display: grid;
   grid-template-columns: minmax(300px, 0.86fr) minmax(0, 1.14fr);
   gap: clamp(36px, 6vw, 80px);
@@ -539,14 +545,22 @@ p {
 .surfaces-section,
 .wireframe-section,
 .skills-section,
+.governance-section,
 .hotel-model-section,
+.setup-section,
+.boundaries-section,
+.foundations-section,
 .validation-section {
   border-top: 1px solid rgba(222, 214, 200, 0.72);
 }
 
 .thesis-grid,
 .manual-grid,
-.model-map {
+.model-map,
+.governance-grid,
+.setup-board,
+.boundary-grid,
+.foundation-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
@@ -558,6 +572,11 @@ p {
 .surface-grid article,
 .large-wire,
 .maturity-rail,
+.loop-rail,
+.governance-grid article,
+.setup-board article,
+.boundary-grid article,
+.foundation-grid article,
 .systems-copy,
 .system-flow {
   border: 1px solid var(--line);
@@ -570,7 +589,8 @@ p {
 .thesis-grid span,
 .principle-stack span,
 .wire-copy span,
-.wire-card > span {
+.wire-card > span,
+.setup-board span {
   display: block;
   margin-bottom: 14px;
   color: var(--brass);
@@ -583,7 +603,10 @@ p {
 .thesis-grid strong,
 .manual-grid strong,
 .skill-system strong,
-.model-map strong {
+.model-map strong,
+.governance-grid strong,
+.boundary-grid strong,
+.foundation-grid strong {
   display: block;
   margin-bottom: 10px;
   color: var(--forest);
@@ -687,7 +710,9 @@ p {
 }
 
 .manual-copy,
-.maturity-copy {
+.maturity-copy,
+.loop-copy,
+.setup-copy {
   max-width: 600px;
 }
 
@@ -898,7 +923,8 @@ p {
   gap: 10px;
 }
 
-.maturity-rail span {
+.maturity-rail span,
+.loop-rail span {
   display: grid;
   place-items: center;
   min-height: 80px;
@@ -911,6 +937,50 @@ p {
 .maturity-rail span:last-child {
   background: var(--forest);
   color: #fffdfa;
+}
+
+.loop-rail {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.loop-rail span {
+  min-height: 78px;
+}
+
+.loop-rail span:nth-child(even) {
+  background: #f3eee7;
+}
+
+.governance-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.governance-grid article,
+.setup-board article,
+.boundary-grid article,
+.foundation-grid article {
+  padding: clamp(24px, 3vw, 30px);
+}
+
+.setup-board {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.setup-board article:nth-child(2) {
+  background: #f3eee7;
+}
+
+.setup-board p,
+.governance-grid p,
+.boundary-grid p,
+.foundation-grid p {
+  margin-bottom: 0;
+}
+
+.boundary-grid article:nth-child(2) {
+  background: #f3eee7;
 }
 
 .model-map {
@@ -1014,6 +1084,7 @@ p {
   .manual-section,
   .systems-section,
   .maturity-section,
+  .learning-loop-section,
   .large-wire {
     grid-template-columns: 1fr;
   }
@@ -1033,7 +1104,11 @@ p {
   .workflow-diagram,
   .surface-grid,
   .skill-system,
-  .model-map {
+  .model-map,
+  .governance-grid,
+  .setup-board,
+  .boundary-grid,
+  .foundation-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1091,7 +1166,12 @@ p {
   .wire-grid,
   .skill-system,
   .maturity-rail,
+  .loop-rail,
   .model-map,
+  .governance-grid,
+  .setup-board,
+  .boundary-grid,
+  .foundation-grid,
   .validation-grid,
   .tile-grid {
     grid-template-columns: 1fr;
@@ -1122,8 +1202,13 @@ p {
   .wireframe-section,
   .skills-section,
   .maturity-section,
+  .governance-section,
+  .learning-loop-section,
   .hotel-model-section,
+  .setup-section,
   .systems-section,
+  .boundaries-section,
+  .foundations-section,
   .validation-section {
     width: min(100% - 32px, var(--max));
     padding: 62px 0;

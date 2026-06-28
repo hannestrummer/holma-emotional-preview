@@ -11,12 +11,7 @@
   <meta property="og:description" content="HOLMA bringt kleinen Hotels die Organisationskraft großer Häuser.">
   <meta property="og:url" content="https://hannestrummer.github.io/holma-emotional-preview/">
   <meta property="og:image" content="https://hannestrummer.github.io/holma-emotional-preview/assets/holma-og-preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="HOLMA - Professionelle Hotelorganisation für kleine Häuser">
-  <meta name="twitter:description" content="HOLMA bringt kleinen Hotels die Organisationskraft großer Häuser.">
-  <meta name="twitter:image" content="https://hannestrummer.github.io/holma-emotional-preview/assets/holma-og-preview.png">
   <link rel="icon" href="assets/holma-favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -532,27 +527,17 @@
       const input = document.getElementById("password-input");
       const error = document.getElementById("password-error");
       const storageKey = "holma-preview-unlocked";
-
-      const unlock = () => {
-        document.body.classList.remove("auth-locked");
-        screen.hidden = true;
-      };
-
+      const unlock = () => { document.body.classList.remove("auth-locked"); screen.hidden = true; };
       const digest = async (value) => {
         const data = new TextEncoder().encode(value);
         const hash = await crypto.subtle.digest("SHA-256", data);
         return [...new Uint8Array(hash)].map((byte) => byte.toString(16).padStart(2, "0")).join("");
       };
-
-      if (sessionStorage.getItem(storageKey) === "true") {
-        unlock();
-      }
-
+      if (sessionStorage.getItem(storageKey) === "true") unlock();
       form.addEventListener("submit", async (event) => {
         event.preventDefault();
         error.hidden = true;
-        const candidate = await digest(input.value);
-        if (candidate === passwordHash) {
+        if (await digest(input.value) === passwordHash) {
           sessionStorage.setItem(storageKey, "true");
           unlock();
           return;
